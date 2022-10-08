@@ -6,7 +6,7 @@ const OrderSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    price: {
+    amount: {
       type: Number,
       required: true,
     },

@@ -5,8 +5,12 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const connect = require("./config/db");
+
 // declaring routes
 const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
+const formAppRoute = require("./routes/formApp");
+const orderRoute = require("./routes/order");
 
 // db connection
 connect();
@@ -32,6 +36,9 @@ app.use(
 
 // using routes
 app.use("/api", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/forms", formAppRoute);
+app.use("/api/orders", orderRoute);
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);

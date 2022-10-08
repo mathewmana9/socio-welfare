@@ -7,7 +7,6 @@ const FormAppSchema = new mongoose.Schema(
     },
     lastname: {
       type: String,
-      unique: true,
       required: true,
     },
     POB: {
@@ -18,7 +17,7 @@ const FormAppSchema = new mongoose.Schema(
       type: Date,
       required: true,
     },
-    idNo: {
+    IdNo: {
       type: Number,
       required: true,
       unique: true,
